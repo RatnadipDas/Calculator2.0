@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bgc"
+    tools:context=".MainActivity"
+    >
+    <!--Input and Out Display with 4 Layout Weight-->
+    <TextView
+        android:id="@+id/tvIO"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:gravity="end|bottom"
+        android:layout_weight="4"
+        />
+
+    <!--Linear Layout contains Layouts for Buttons and have orientation along horizontal-->
+    <!--This view has a Layout Weight of 7-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="7"
+        >
+
+        <!--Linear Layout contains AC, 7, 4, 1, . buttons with orientation along vertical-->
+        <!--Layout Weight is 1-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+            <!--Button of AC-->
+            <Button
+                android:id="@+id/btnAC"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="20sp"
+                android:text="@string/all_clear"
+                android:textColor="@color/text_btn_yellow"
+                android:backgroundTint="@color/border_btn"
+                android:onClick="onAC"
+                android:layout_weight="1"
+                tools:ignore="UsingOnClickInXml" />
+
+            <!--Button of 7-->
+            <Button
+                android:id="@+id/btnSeven"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="20sp"
+                android:text="@string/_7"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/mid_btn"
+                android:layout_weight="1"
+                android:onClick="onDigit"
+                tools:ignore="UsingOnClickInXml"
+                />
+
+            <!--Button of 4-->
+            <Button
+                android:id="@+id/btnFour"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="20sp"
+                android:text="@string/_4"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/mid_btn"
+                android:layout_weight="1"
+                android:onClick="onDigit"
+                tools:ignore="UsingOnClickInXml"
+                />
+
+            <!--Button of 1-->
+            <Button
+                android:id="@+id/btnOne"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="20sp"
+                android:text="@string/_1"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/mid_btn"
+                android:layout_weight="1"
+                android:onClick="onDigit"
+                tools:ignore="UsingOnClickInXml"
+                />
+
+            <!--Button of .-->
+            <Button
+                android:id="@+id/btnDot"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="20sp"
+                android:text="@string/Dot"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/mid_btn"
+                android:layout_weight="1"
+                android:onClick="onDot"
+                tools:ignore="UsingOnClickInXml"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--Linear Layout contains /, 8, 5, 2, 0 buttons with orientation along vertical-->
+        <!--Layout Weight is 1-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+            <!--Button of /-->
+            <Button
+                android:id="@+id/btnDivide"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="20sp"
+                android:text="@string/divide"
+                android:textColor="@color/text_btn_yellow"
+                android:backgroundTint="@color/border_btn"
+                android:onClick="onOperator"
+                android:layout_weight="1"
+                tools:ignore="UsingOnClickInXml" />
+
+            <!--Button of 8-->
+            <Button
+                android:id="@+id/btnEight"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="20sp"
+                android:text="@string/_8"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/mid_btn"
+                android:layout_weight="1"
+                android:onClick="onDigit"
+                tools:ignore="UsingOnClickInXml"
+                />
+
+            <!--Button of 5-->
+            <Button
+                android:id="@+id/btnFive"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="20sp"
+                android:text="@string/_5"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/mid_btn"
+                android:layout_weight="1"
+                android:onClick="onDigit"
+                tools:ignore="UsingOnClickInXml"
+                />
+
+            <!--Button of 2-->
+            <Button
+                android:id="@+id/btnTwo"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="20sp"
+                android:text="@string/_2"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/mid_btn"
+                android:layout_weight="1"
+                android:onClick="onDigit"
+                tools:ignore="UsingOnClickInXml"
+                />
+
+            <!--Button of 0-->
+            <Button
+                android:id="@+id/btnZero"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="20sp"
+                android:text="@string/_0"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/mid_btn"
+                android:layout_weight="1"
+                android:onClick="onDigit"
+                tools:ignore="UsingOnClickInXml"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--Linear Layout contains *, 9, 6, 3, 00 buttons with orientation along vertical-->
+        <!--Layout Weight is 1-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+            <!--Button of *-->
+            <Button
+                android:id="@+id/btnMultiply"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="20sp"
+                android:text="@string/multiply"
+                android:textColor="@color/text_btn_yellow"
+                android:backgroundTint="@color/border_btn"
+                android:onClick="onOperator"
+                android:layout_weight="1"
+                tools:ignore="UsingOnClickInXml" />
+
+            <!--Button of 9-->
+            <Button
+                android:id="@+id/btnNine"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="20sp"
+                android:text="@string/_9"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/mid_btn"
+                android:layout_weight="1"
+                android:onClick="onDigit"
+                tools:ignore="UsingOnClickInXml"
+                />
+
+            <!--Button of 6-->
+            <Button
+                android:id="@+id/btnSix"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="20sp"
+                android:text="@string/_6"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/mid_btn"
+                android:layout_weight="1"
+                android:onClick="onDigit"
+                tools:ignore="UsingOnClickInXml"
+                />
+
+            <!--Button of 3-->
+            <Button
+                android:id="@+id/btnThree"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="20sp"
+                android:text="@string/_3"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/mid_btn"
+                android:layout_weight="1"
+                android:onClick="onDigit"
+                tools:ignore="UsingOnClickInXml"
+                />
+
+            <!--Button of 00-->
+            <Button
+                android:id="@+id/btnZeroZero"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="20sp"
+                android:text="@string/_00"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/mid_btn"
+                android:layout_weight="1"
+                android:onClick="onDigit"
+                tools:ignore="UsingOnClickInXml"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--Linear Layout contains DEL, -, +, = buttons with orientation along vertical-->
+        <!--Layout Weight is 1-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+
+            <!--Button of DEL-->
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="20sp"
+                android:text="@string/delete"
+                android:textColor="@color/text_btn_yellow"
+                android:backgroundTint="@color/border_btn"
+                android:onClick="onDEL"
+                android:layout_weight="1"
+                tools:ignore="UsingOnClickInXml" />
+
+            <!--Button of - -->
+            <Button
+                android:id="@+id/btnSubtract"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="20sp"
+                android:text="@string/subtract"
+                android:onClick="onOperator"
+                android:textColor="@color/text_btn_yellow"
+                android:backgroundTint="@color/border_btn"
+                android:layout_weight="1"
+                />
+
+            <!--Button of +-->
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="20sp"
+                android:text="@string/add"
+                android:textColor="@color/text_btn_yellow"
+                android:backgroundTint="@color/border_btn"
+                android:onClick="onOperator"
+                android:layout_weight="1"
+                tools:ignore="UsingOnClickInXml" />
+
+            <!--Button of =-->
+            <Button
+                android:id="@+id/btnEqual"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="20sp"
+                android:text="@string/equal"
+                android:textColor="@color/border_btn"
+                android:backgroundTint="@color/text_btn_yellow"
+                android:onClick="onEqual"
+                android:layout_weight="2"
+                tools:ignore="UsingOnClickInXml" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
